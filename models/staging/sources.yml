@@ -1,0 +1,201 @@
+version: 2
+
+sources:
+
+  - name: adventureworks
+    description: This is a replica of the Postgres database used by our client.
+
+    tables:
+
+      - name: address
+        description: >
+          Address.
+        columns:
+          - name: addressid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: businessentity
+        description: >
+          Bussiness Entity.
+        columns:
+          - name: businessentityid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: businessentityaddress
+        description: >
+          Bussiness Entity Address.
+        columns:
+          - name: businessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null
+
+      - name: countryregion
+        description: >
+          Country Region.
+        columns:
+          - name: countryregioncode
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: creditcard
+        description: >
+          Credit Card.
+        columns:
+          - name: creditcardid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: customer
+        description: >
+          Customer.
+        columns:
+          - name: customerid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: department
+        description: >
+          Department.
+        columns:
+          - name: departmentid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: employee
+        description: >
+          Employee.
+        columns:
+          - name: bussinessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null
+
+      - name: person
+        description: >
+          Person.
+        columns:
+          - name: bussinessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null
+
+      - name: product
+        description: >
+          Product.
+        columns:
+          - name: productid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: salesorderheader
+        description: >
+          Sales Order Header.
+        columns:
+          - name: salesorderid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: salesorderdetail
+        description: >
+          Sales Order Detail.
+        columns:
+          - name: salesorderdetailid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: salesorderheadersalesreason
+        description: >
+          Sales Order Header Sales Reason.
+        columns:
+          - name: salesorderid
+            description: Primary Key from Sales Order
+            testes:
+              - not null
+
+      - name: salesperson
+        description: >
+          Sales Person.
+        columns:
+          - name: bussinessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null
+
+      - name: salesreason
+        description: >
+          Sales Reason.
+        columns:
+          - name: salesreasonid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: shipmethod
+        description: >
+          Ship Method.
+        columns:
+          - name: shipmethodid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: specialoffer
+        description: >
+          Special Offer.
+        columns:
+          - name: specialofferid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: specialofferproduct
+        description: >
+          Special Offer Product.
+        columns:
+          - name: specialofferid
+            description: Primary Key from Special Offer
+            testes:
+              - not null
+
+      - name: stateprovince
+        description: >
+          State Province.
+        columns:
+          - name: stateprovinceid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: store
+        description: >
+          Store.
+        columns:
+          - name: bussinessentityid
+            description: Primary Key from Bussiness Entity
+            testes:
+              - not null
